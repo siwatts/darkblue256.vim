@@ -401,7 +401,7 @@ fun! s:X(group, fg, bg, attr, lcfg, lcbg)
 endfun
 " }}}
 
-call s:X("Normal","c0c0c0",s:background_color,"","White","")
+call s:X("Normal","c0c0c0",s:background_color,"","Gray",s:termBlack)
 set background=dark
 
 if version >= 700
@@ -418,56 +418,56 @@ if version >= 700
   call s:X("PmenuSel","c0c0c0","2050d0","",s:termBlack,"White")
 endif
 
-call s:X("Visual","c0c0c0","8080ff","","",s:termBlack)
-call s:X("Cursor","000000","ffff00","","","")
+call s:X("Visual","c0c0c0","8080ff","","Gray","LightBlue")
+call s:X("Cursor","000000","ffff00","",s:termBlack,"Yellow")
 
-call s:X("LineNr","90f020",s:background_color,"NONE",s:termBlack,"")
+call s:X("LineNr","90f020",s:background_color,"NONE","Green","")
 call s:X("CursorLineNr","ffff00","","bold","White","")
-call s:X("Comment","80a0ff","","NONE","Grey","")
-call s:X("Todo","d14a14","1248d1","NONE","White",s:termBlack)
+call s:X("Comment","80a0ff","","NONE","DarkRed","")
+call s:X("Todo","d14a14","1248d1","NONE","Red","DarkBlue")
 
-call s:X("StatusLine","0000ff","a9a9a9","NONE","","White")
-call s:X("StatusLineNC","000000","a9a9a9","NONE","White","Black")
-call s:X("VertSplit","000000","a9a9a9","",s:termBlack,s:termBlack)
-call s:X("WildMenu","ffff00","000000","","Magenta","")
+call s:X("StatusLine","0000ff","a9a9a9","NONE","Blue","Gray")
+call s:X("StatusLineNC","000000","a9a9a9","NONE",s:termBlack,"Gray")
+call s:X("VertSplit","000000","a9a9a9","",s:termBlack,"Gray")
+call s:X("WildMenu","ffff00","000000","","Yellow",s:termBlack)
 
-call s:X("Folded","808080",s:background_color,"NONE",s:termBlack,"")
-call s:X("FoldColumn","808080",s:background_color,"","",s:termBlack)
+call s:X("Folded","808080",s:background_color,"NONE","DarkGray",s:termBlack)
+call s:X("FoldColumn","808080",s:background_color,"","DarkGray",s:termBlack)
 call s:X("SignColumn","00ffff","bebebe","","",s:termBlack)
 call s:X("ColorColumn","","8b0000","","",s:termBlack)
 
-call s:X("Title","ff00ff","","NONE","Green","")
+call s:X("Title","ff00ff","","NONE","Magenta","")
 
-call s:X("Constant","ffa0a0","","","Red","")
-call s:X("Special","ffa500","","","Green","")
+call s:X("Constant","ffa0a0","","","Magenta","")
+call s:X("Special","ffa500","","","Brown","")
 "call s:X("Delimiter","ffa500","","","Grey","")
 
 "call s:X("String","ffa0a0","","","Green","")
 "call s:X("StringDelimiter","556633","","","DarkGreen","")
 
-call s:X("Identifier","40ffff","","","LightCyan","")
+call s:X("Identifier","40ffff","","","Cyan","")
 "call s:X("Structure","60ff60","","","LightCyan","")
 "call s:X("Function","fad07a","","","Yellow","")
-call s:X("Statement","ffff60","","","DarkBlue","")
-call s:X("PreProc","ff80ff","","","LightBlue","")
+call s:X("Statement","ffff60","","","Yellow","")
+call s:X("PreProc","ff80ff","","","Magenta","")
 
 "hi! link Operator Structure
 "hi! link Conceal Operator
 call s:X("Conceal","d3d3d3","a9a9a9","none","","")
 
-call s:X("Type","60ff60","","","Yellow","")
-call s:X("NonText","0030ff","","bold",s:termBlack,"")
+call s:X("Type","60ff60","","","Green","")
+call s:X("NonText","0030ff","","bold","DarkBlue","")
 
-call s:X("SpecialKey","00ffff","","",s:termBlack,"")
+call s:X("SpecialKey","00ffff","","","DarkCyan","")
 
-call s:X("Search","90fff0","2050d0","NONE","Magenta","")
+call s:X("Search","90fff0","2050d0","NONE","White","DarkBlue")
 
-call s:X("Directory","00ffff","","","Yellow","")
-call s:X("ErrorMsg","ffffff","287eff","","","DarkRed")
+call s:X("Directory","00ffff","","","Cyan","")
+call s:X("ErrorMsg","ffffff","287eff","","White","LightBlue")
 "hi! link Error ErrorMsg
 call s:X("Error","ffffff","ff0000","","","DarkRed")
 "hi! link MoreMsg Special
-call s:X("MoreMsg","2e8b57","","bold","","DarkRed")
+call s:X("MoreMsg","2e8b57","","bold","DarkGreen","")
 call s:X("Question","00ff00","","","Green","")
 
 
@@ -485,10 +485,10 @@ hi! link diffAdded String
 
 " VimDiff
 
-call s:X("DiffAdd","D2EBBE","437019","","White","DarkGreen")
-call s:X("DiffDelete","40000A","700009","","DarkRed","DarkRed")
-call s:X("DiffChange","","2B5B77","","White","DarkBlue")
-call s:X("DiffText","8fbfdc","000000","reverse","Yellow","")
+call s:X("DiffAdd","D2EBBE","437019","","","DarkBlue")
+call s:X("DiffDelete","40000A","700009","","Blue","Cyan")
+call s:X("DiffChange","","2B5B77","","","Magenta")
+call s:X("DiffText","8fbfdc","000000","reverse","Red","")
 
 " PHP
 
