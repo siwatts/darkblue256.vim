@@ -84,9 +84,9 @@ endif
 " - g:darkblue256_use_term_italics   (default = 0)
 
 ""Original gvim bg colour.
-"let s:background_color = "000040"
+let s:background_color = "000040"
 ""closest 256 approx.
-let s:background_color = "00005f"
+"let s:background_color = "00005f"
 
 if exists("g:darkblue256_overrides")
   let s:overrides = g:darkblue256_overrides
@@ -624,6 +624,8 @@ if !s:low_color
   "hi StatusLineNC ctermbg=235
   "hi Folded ctermbg=236
   "hi DiffText ctermfg=81
+  hi Normal ctermbg=17
+  hi LineNr ctermbg=17
   hi DbgBreakPt ctermbg=53
   hi IndentGuidesOdd ctermbg=235
   hi IndentGuidesEven ctermbg=234
